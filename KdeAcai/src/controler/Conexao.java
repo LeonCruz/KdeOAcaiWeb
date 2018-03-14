@@ -25,4 +25,8 @@ public class Conexao {
 			System.out.println("Erro ao tentar estabelecer conexão");
 		}
 	}
+	
+	public static void main(String[] args) {
+		conectar();
+	}
 }
