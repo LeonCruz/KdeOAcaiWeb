@@ -24,15 +24,18 @@ public class ManipulacaoBanco {
 	}
 	
 	
-	public static void pegarLojas(String sql) {
+	public static ResultSet pegarLojas(String sql) {
 		Conexao.conectar();
+		ResultSet resultado = null;
 		
 		try {
-			ResultSet resultado = stm.executeQuery(sql);
+			resultado = stm.executeQuery(sql);
 			System.out.println("Dados alterados com sucesso");
 			
 		} catch (SQLException e) {
 			System.out.println("Erro ao realizar operação");
 		}
+		
+		return resultado;
 	}
 }
