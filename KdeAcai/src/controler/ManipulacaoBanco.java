@@ -11,37 +11,12 @@ public class ManipulacaoBanco {
 	public static Connection con;
     public static Statement stm;
     
-	public static void cadastrar(String sql){
+	public static void manipular(String sql){
 		Conexao.conectar();
 		
 		try {
 			int resultado = stm.executeUpdate(sql);
 			System.out.println("Cadastro realizado com sucesso");
-			
-		} catch (SQLException e) {
-			System.out.println("Erro ao realizar operação");
-		}
-	}
-	
-	public static void deletar(String sql) {
-		Conexao.conectar();
-		
-		try {
-			int resultado = stm.executeUpdate(sql);
-			System.out.println("Cliente apagado");
-			
-		} catch (SQLException e) {
-			System.out.println("Erro ao realizar operação");
-		}
-	}
-	
-	
-	public static void atualizar(String sql) {
-		Conexao.conectar();
-		
-		try {
-			int resultado = stm.executeUpdate(sql);
-			System.out.println("Dados alterados com sucesso");
 			
 		} catch (SQLException e) {
 			System.out.println("Erro ao realizar operação");
