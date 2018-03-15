@@ -6,7 +6,7 @@ import modelo.Clientes;
 
 public class UsuarioDAO {
 	public static void inserir(Clientes cliente) {
-		String sql;
+		String sql = "";
 		ManipulacaoBanco.manipular(sql);
 	}
 }
