@@ -2,15 +2,14 @@ package DAO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import controle.Conexao;
 import controle.ManipulacaoBanco;
 import modelo.Clientes;
 
 public class ClientesDAO {
 	public static void cadastrar(Clientes cliente) {
-		String sql  = String.format("SELECT * FROM clientes WHERE login=%s", cliente.getLogin());
-		ResultSet resultado = ManipulacaoBanco.pegarCliente(sql);
+		ResultSet resultado = consultarCliente(cliente);
+		String sql;
 		
 		try {
 			if(resultado.next()) {
@@ -27,8 +26,8 @@ public class ClientesDAO {
 	}
 	
 	public static void deletar(Clientes cliente) {
-		String sql  = String.format("SELECT * FROM clientes WHERE login=%s", cliente.getLogin());
-		ResultSet resultado = ManipulacaoBanco.pegarCliente(sql);
+		ResultSet resultado = consultarCliente(cliente);
+		String sql;
 		int id;
 		
 		try {
@@ -43,5 +42,10 @@ public class ClientesDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private static ResultSet consultarCliente(Clientes cliente) {
+		String sql  = String.format("SELECT * FROM clientes WHERE login=%s", cliente.getLogin());
+		return ManipulacaoBanco.pegarCliente(sql);
 	}
 }

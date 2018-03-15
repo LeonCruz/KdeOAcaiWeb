@@ -17,7 +17,7 @@
         <label for="preco">Preço</label>
     </main>
     <footer>
-        <button>Cadastrar Loja</button>
+        <a href="cadastro-loja.jsp"><button>Cadastrar Loja</button></a>
     </footer>
 </body>
 </html>
