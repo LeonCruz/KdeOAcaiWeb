@@ -4,4 +4,24 @@
 
 html, body {
 	min-width: 100%;
+	margin: 0;
+}
+
+.main-index::before {
+	/*background: url() no-repeat;*/
+}
+
+.main-index {
+	height: 100vh;
+	width: 100%;
+}
+
+.footer-index {
+	position: absolute;
+	bottom: 0;
+	
+	height: 100px;
+	width: 100%;
+	
+	background: rgba(245,245,245, 0.3);
 }

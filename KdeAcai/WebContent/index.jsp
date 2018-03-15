@@ -9,14 +9,14 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <main>
+    <main class="main-index">
         <img src="" alt="Logo">
         <input type="radio" name="opcao" id="classific" value="classific">
         <label for="classific">Classificação</label>
         <input type="radio" name="opcao" id="preco" value="preco">
         <label for="preco">Preço</label>
     </main>
-    <footer>
+    <footer class="footer-index">
         <a href="cadastro-loja.jsp"><button>Cadastrar Loja</button></a>
     </footer>
 </body>
