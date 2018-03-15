@@ -7,9 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="">
-		<h2 class="titulo-loja"></h2>
-		
-	</div>
+	<header class="header-lojas"></header>
+	<main class="principal">
+		<div class="loja">
+			<h2 class="titulo-loja"></h2>
+			<span class="endereco-loja"></span>
+			<div class="estrelas">*****</div>
+			<div class="precos">
+				<span class="preco"></span>
+				<span class="preco"></span>
+				<span class="preco"></span>
+			</div>
+		</div>
+	</main>
 </body>
 </html>
