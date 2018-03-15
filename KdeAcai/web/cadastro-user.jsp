@@ -23,7 +23,7 @@
         <label for="pw">Senha</label><br>
         <input type="password" name="pw" placeholder="********"><br>
 
-        <label for="confpw">Senha</label><br>
+        <label for="confpw">Confirmação da Senha</label><br>
         <input type="password" name="confpw" placeholder="********"><br>
 
         <input type="submit" value="Cadastrar">
