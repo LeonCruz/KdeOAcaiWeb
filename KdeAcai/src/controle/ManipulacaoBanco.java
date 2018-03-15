@@ -38,4 +38,19 @@ public class ManipulacaoBanco {
 		
 		return resultado;
 	}
+	
+	public static ResultSet pegarCliente(String sql) {
+		Conexao.conectar();
+		ResultSet resultado = null;
+		
+		try {
+			resultado = stm.executeQuery(sql);
+			System.out.println("Dados alterados com sucesso");
+			
+		} catch (SQLException e) {
+			System.out.println("Erro ao realizar opera��o");
+		}
+		
+		return resultado;
+	}
 }
