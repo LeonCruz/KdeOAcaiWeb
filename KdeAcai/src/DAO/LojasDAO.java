@@ -40,6 +40,8 @@ public class LojasDAO {
 	}
 	
 	public static void atualizar(Lojas loja) {
+		// Função que atualiza os dados da loja
+		
 		String sql = "";
 		ResultSet resultado = consultarLoja(loja);
 		int id = 0;
