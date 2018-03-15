@@ -21,11 +21,11 @@ public class ClientesDAO {
 		
 		try {
 			id = resultado.getInt("id");
+			sql = String.format("DETETE FROM clientes WHERE id=%d", id);
+			System.out.println("Cliente deletado!");
 			
 		} catch (SQLException e) {
 			System.out.println("Não encontrado");
 		}
-		
-		
 	}
 }
