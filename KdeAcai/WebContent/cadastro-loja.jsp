@@ -32,13 +32,13 @@
         <h2>Preços</h2>
 
         <label for="fino">Açaí­ Fino</label><br>
-        <input type="text" name="fino" placeholder="6.50"><br>
+        <input type="text" name="fino" placeholder="6.55"><br>
 
         <label for="medio">Açaí­ Médio</label><br>
-        <input type="text" name="medio" placeholder="6.50"><br>
+        <input type="text" name="medio" placeholder="6.55"><br>
 
         <label for="grosso">Açaí­ Grosso</label><br>
-        <input type="text" name="grosso" placeholder="6.50"><br>
+        <input type="text" name="grosso" placeholder="6.55"><br>
 
         <input type="submit" value="Cadastrar">
     </form>
