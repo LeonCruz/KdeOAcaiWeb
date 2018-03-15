@@ -72,7 +72,7 @@ public class LojasDAO {
 					sql = String.format("UPDATE loja SET nome='%s' WHERE id=%d", novoNome, id);
 				} 
 				
-				if(novaAvalicao != loja.getAvaliacao()) {
+				if(novaAvalicao != 0) {
 					sql = String.format("UPDATE loja SET avaliacao='%s' WHERE id=%d", novaAvalicao, id);
 				} 
 				
@@ -84,15 +84,15 @@ public class LojasDAO {
 					sql = String.format("UPDATE loja SET telefone='%s' WHERE id=%d", novoTelefone, id);
 				}
 				
-				if(novoTipoFino!= loja.getTipoFino()) {
+				if(novoTipoFino!= 0) {
 					sql = String.format("UPDATE loja SET tipoFino='%s' WHERE id=%d", novoTipoFino, id);
 				} 
 				
-				if(novoTipoMedio!= loja.getTipoMedio()) {
+				if(novoTipoMedio!= 0) {
 					sql = String.format("UPDATE loja SET tipoMedio='%s' WHERE id=%d", novoTipoMedio, id);
 				}
 				
-				if(novoTipoGrosso!= loja.getTipoGrosso()) {
+				if(novoTipoGrosso!= 0) {
 					sql = String.format("UPDATE loja SET tipoGrosso='%s' WHERE id=%d", novoTipoGrosso, id);
 				}
 			}
