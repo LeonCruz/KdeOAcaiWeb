@@ -8,6 +8,8 @@ import modelo.Clientes;
 
 public class ClientesDAO {
 	public static void cadastrar(Clientes cliente) {
+		// Função que realiza o cadastro do cliente
+		
 		ResultSet resultado = consultarCliente(cliente);
 		String sql;
 		
@@ -26,6 +28,8 @@ public class ClientesDAO {
 	}
 	
 	public static void deletar(Clientes cliente) {
+		// Função que deleta o cliente
+		
 		ResultSet resultado = consultarCliente(cliente);
 		String sql;
 		int id;
@@ -45,6 +49,8 @@ public class ClientesDAO {
 	}
 	
 	public void atualizar(Clientes cliente) {
+		// Função que atualiza os dados do cliente
+		
 		ResultSet resultado = consultarCliente(cliente);
 		int id;
 		
