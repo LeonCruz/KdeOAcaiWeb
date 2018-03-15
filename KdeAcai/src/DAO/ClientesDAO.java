@@ -44,7 +44,7 @@ public class ClientesDAO {
 		}
 	}
 	
-	public static ResultSet consultarCliente(Clientes cliente) {
+	private static ResultSet consultarCliente(Clientes cliente) {
 		String sql  = String.format("SELECT * FROM clientes WHERE login=%s", cliente.getLogin());
 		return ManipulacaoBanco.pegarCliente(sql);
 	}
