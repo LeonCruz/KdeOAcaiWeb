@@ -106,7 +106,7 @@ public class LojasDAO {
 		// Função que pesquisa no banco uma loja que já existe;
 		
 		String sql  = String.format("SELECT * FROM lojas WHERE email='%s'", loja.getEmail());
-		return ManipulacaoBanco.pegarCliente(sql);
+		return ManipulacaoBanco.pegarLojas(sql);
 	}
 	
 }
