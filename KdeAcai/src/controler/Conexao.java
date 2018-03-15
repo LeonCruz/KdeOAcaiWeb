@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
-	private String caminho = "";
-	private String login = "";
-	private String senha = "";
+	private static String caminho = "localhost";
+	private static String login = "root";
+	private static String senha = "root";
 	private static Connection con;
 	
 	public static void conectar() {
