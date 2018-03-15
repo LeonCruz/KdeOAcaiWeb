@@ -11,9 +11,9 @@
 <body>
     <main>
         <img src="" alt="Logo">
-        <input type="radio" name="classif">
-        <label for="classif">Classificação</label>
-        <input type="radio" name="preco">
+        <input type="radio" name="opcao" id="classific" value="classific">
+        <label for="classific">Classificação</label>
+        <input type="radio" name="opcao" id="preco" value="preco">
         <label for="preco">Preço</label>
     </main>
     <footer>
