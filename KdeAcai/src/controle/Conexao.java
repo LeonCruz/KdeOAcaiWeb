@@ -11,6 +11,8 @@ public class Conexao {
 	private static Connection con;
 	
 	public static void conectar() {
+		// Função que realiza a conexeão com o banco
+		
 		try {
 			Class.forName("com.myql.jdbc.Driver");
 			System.out.println("Carregou o driver");
