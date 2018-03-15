@@ -87,6 +87,8 @@ public class ClientesDAO {
 	}
 	
 	private static ResultSet consultarCliente(Clientes cliente) {
+		// Função que pesquisa no banco um login que já existe;
+		
 		String sql  = String.format("SELECT * FROM clientes WHERE login='%s'", cliente.getLogin());
 		return ManipulacaoBanco.pegarCliente(sql);
 	}
