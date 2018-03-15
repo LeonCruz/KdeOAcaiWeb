@@ -5,7 +5,7 @@
 		<title>Login</title>
 	</head>
 	<body>
-		<h1>Kde o AÃ§ai</h1>
+		<h1>Kde o Açai</h1>
 		<form type="form">
 			<div class="">
 				<div class="">
