@@ -8,6 +8,8 @@ import java.sql.Statement;
 import controle.Conexao;
 
 public class ManipulacaoBanco {
+	// Classe que executa as funções das classes 'DAO'
+	
 	public static Connection con;
     public static Statement stm;
     
@@ -24,7 +26,7 @@ public class ManipulacaoBanco {
 	}
 	
 	
-	public static ResultSet pegarLojas(String sql) {
+	public static ResultSet pegarLojas(String sql) {		
 		Conexao.conectar();
 		ResultSet resultado = null;
 		
