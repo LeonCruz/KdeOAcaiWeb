@@ -8,7 +8,7 @@ import controle.ManipulacaoBanco;
 import modelo.Clientes;
 
 public class ClientesDAO {
-	public static void inserir(Clientes cliente) {
+	public static void cadastrar(Clientes cliente) {
 		String sql  = String.format("SELECT * FROM clientes WHERE login=%s", cliente.getLogin());
 		ResultSet resultado = ManipulacaoBanco.pegarCliente(sql);
 		
@@ -24,8 +24,6 @@ public class ClientesDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	public static void deletar(Clientes cliente) {
