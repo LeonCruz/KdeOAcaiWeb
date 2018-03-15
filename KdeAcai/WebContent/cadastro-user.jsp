@@ -18,13 +18,13 @@
         <input type="email" name="email" placeholder="nome@exemplo.com"><br>
 
         <label for="confemail">Confirmação de E-mail</label><br>
-        <input type="email" name="confirmaemail" placeholder="nome@exemplo.com"><br>
+        <input type="email" name="confirmemail" placeholder="nome@exemplo.com"><br>
 
         <label for="pw">Senha</label><br>
         <input type="password" name="pw" placeholder="********"><br>
 
         <label for="confpw">Confirmação da Senha</label><br>
-        <input type="password" name="confirmapw" placeholder="********"><br>
+        <input type="password" name="confirmpw" placeholder="********"><br>
 
         <input type="submit" value="Cadastrar">
     </form>
