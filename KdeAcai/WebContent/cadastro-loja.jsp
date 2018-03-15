@@ -9,15 +9,15 @@
 <body>
     <form action="" method="post">
         <label for="name">Nome Loja</label><br>
-        <input type="text" name="nome" placeholder="AÃ§aÃ­ do Silva"><br>
+        <input type="text" name="nome" placeholder="Nome"><br>
         
         <label for="email">E-mail</label><br>
         <input type="email" name="email" placeholder="nome@exemplo.com"><br>
 
-        <label for="confemail">ConfirmaÃ§Ã£o de E-mail</label><br>
+        <label for="confemail">Confirmação de E-mail</label><br>
         <input type="email" name="confemail" placeholder="nome@exemplo.com"><br>
 
-        <label for="localizacao">EndereÃ§o</label><br>
+        <label for="localizacao">Endereço</label><br>
         <input type="text" name="localizacao" placeholder="Tv. WE 30, 400, Coqueiro"><br>
 
         <label for="telefone">Telefone</label><br>
@@ -26,18 +26,18 @@
         <label for="pw">Senha</label><br>
         <input type="password" name="pw" placeholder="********"><br>
 
-        <label for="confpw">ConfirmaÃ§Ã£o da Senha</label><br>
+        <label for="confpw">Confirmação da Senha</label><br>
         <input type="password" name="confpw" placeholder="********"><br>
 
-        <h2>PreÃ§os</h2>
+        <h2>Preços</h2>
 
-        <label for="fino">AÃ§aÃ­ Fino</label><br>
+        <label for="fino">Açaí­ Fino</label><br>
         <input type="text" name="fino" placeholder="6.50"><br>
 
-        <label for="medio">AÃ§aÃ­ MÃ©dio</label><br>
+        <label for="medio">Açaí­ Médio</label><br>
         <input type="text" name="medio" placeholder="6.50"><br>
 
-        <label for="grosso">AÃ§aÃ­ Grosso</label><br>
+        <label for="grosso">Açaí­ Grosso</label><br>
         <input type="text" name="grosso" placeholder="6.50"><br>
 
         <input type="submit" value="Cadastrar">
