@@ -1,7 +1,7 @@
 package DAO;
 
-import controler.Conexao;
-import controler.ManipulacaoBanco;
+import controle.Conexao;
+import controle.ManipulacaoBanco;
 import modelo.Clientes;
 
 public class UsuarioDAO {
