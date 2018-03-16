@@ -12,6 +12,7 @@ package modelo;
 public class Lojas {
     
     private String email;
+    private String senha;
     private String nome;
     private float avaliacao;
     private String localizacao;
@@ -22,6 +23,10 @@ public class Lojas {
 
     public String getEmail() {
         return email;
+    }
+    
+    public String getSenha() {
+        return senha;
     }
 
     public String getNome() {
@@ -54,6 +59,10 @@ public class Lojas {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public void setNome(String nome) {
