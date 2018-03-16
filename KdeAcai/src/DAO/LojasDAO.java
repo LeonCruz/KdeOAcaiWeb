@@ -73,7 +73,7 @@ public class LojasDAO {
 				} 
 				
 				if(novaAvalicao != 0) {
-					sql = String.format("UPDATE loja SET avaliacao='%s' WHERE id=%d", novaAvalicao, id);
+					sql = String.format("UPDATE loja SET avaliacao='%f' WHERE id=%d", novaAvalicao, id);
 				} 
 				
 				if(!novaLocalizacao.equals("")) {
@@ -85,15 +85,15 @@ public class LojasDAO {
 				}
 				
 				if(novoTipoFino!= 0) {
-					sql = String.format("UPDATE loja SET tipoFino='%s' WHERE id=%d", novoTipoFino, id);
+					sql = String.format("UPDATE loja SET tipoFino='%f' WHERE id=%d", novoTipoFino, id);
 				} 
 				
 				if(novoTipoMedio!= 0) {
-					sql = String.format("UPDATE loja SET tipoMedio='%s' WHERE id=%d", novoTipoMedio, id);
+					sql = String.format("UPDATE loja SET tipoMedio='%f' WHERE id=%d", novoTipoMedio, id);
 				}
 				
 				if(novoTipoGrosso!= 0) {
-					sql = String.format("UPDATE loja SET tipoGrosso='%s' WHERE id=%d", novoTipoGrosso, id);
+					sql = String.format("UPDATE loja SET tipoGrosso='%f' WHERE id=%d", novoTipoGrosso, id);
 				}
 			}
 			
