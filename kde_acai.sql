@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: kde_acai
 -- ------------------------------------------------------
--- Server version	5.7.20-log
+-- Server version	5.7.18-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -15,8 +15,62 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE DATABASE `kde_acai`;
-USE `kde_acai`;
+--
+-- Table structure for table `avaliacaocliente`
+--
+
+DROP TABLE IF EXISTS `avaliacaocliente`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `avaliacaocliente` (
+  `id_loja` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
+  `avaliacao` float NOT NULL,
+  PRIMARY KEY (`id_loja`,`id_cliente`),
+  KEY `id_cliente_idx` (`id_cliente`),
+  CONSTRAINT `id_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `id_loja` FOREIGN KEY (`id_loja`) REFERENCES `lojas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `avaliacaocliente`
+--
+
+LOCK TABLES `avaliacaocliente` WRITE;
+/*!40000 ALTER TABLE `avaliacaocliente` DISABLE KEYS */;
+/*!40000 ALTER TABLE `avaliacaocliente` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 trigger atualizando_avaliacao
+after insert on avaliacaocliente
+for each row begin
+
+	set @mediaAvalicao = 0;
+    
+	select avg(avaliacao)
+    into @mediaAvalicao
+	from avaliacaocliente
+	WHERE id_loja = new.id_loja;
+	
+    update lojas
+		set avaliacao = @mediaAvalicao
+		where id = new.id_loja;
+
+end */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Table structure for table `clientes`
@@ -73,9 +127,17 @@ CREATE TABLE `lojas` (
 
 LOCK TABLES `lojas` WRITE;
 /*!40000 ALTER TABLE `lojas` DISABLE KEYS */;
-INSERT INTO `lojas` VALUES (9,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',4.5,'Av. Dois Corações, 1245','91985284163',4,8,15),(10,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',5,'Rua Vasconcelos, 10','91987456329',5,9,15),(11,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',3.3,'Av. Pobre Juan, 236','91985286394',3,7.5,14);
+INSERT INTO `lojas` VALUES (9,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',0,'Av. Dois Corações, 1245','91985284163',4,8,15),(10,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',0,'Rua Vasconcelos, 10','91987456329',5,9,15),(11,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',0,'Av. Pobre Juan, 236','91985286394',3,7.5,14);
 /*!40000 ALTER TABLE `lojas` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'kde_acai'
+--
+
+--
+-- Dumping routines for database 'kde_acai'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -86,4 +148,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-14 16:07:00
+-- Dump completed on 2018-03-17  0:48:15
