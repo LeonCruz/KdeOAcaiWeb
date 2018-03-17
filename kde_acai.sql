@@ -19,6 +19,10 @@
 -- Table structure for table `avaliacaocliente`
 --
 
+CREATE DATABASE kde_acai;
+
+USE kde_acai;
+
 DROP TABLE IF EXISTS `avaliacaocliente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -53,7 +57,6 @@ DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 trigger atualizando_avaliacao
 after insert on avaliacaocliente
 for each row begin
-
 	set @mediaAvalicao = 0;
     
 	select avg(avaliacao)
@@ -64,7 +67,6 @@ for each row begin
     update lojas
 		set avaliacao = @mediaAvalicao
 		where id = new.id_loja;
-
 end */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -127,7 +129,7 @@ CREATE TABLE `lojas` (
 
 LOCK TABLES `lojas` WRITE;
 /*!40000 ALTER TABLE `lojas` DISABLE KEYS */;
-INSERT INTO `lojas` VALUES (9,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',0,'Av. Dois Corações, 1245','91985284163',4,8,15),(10,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',0,'Rua Vasconcelos, 10','91987456329',5,9,15),(11,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',0,'Av. Pobre Juan, 236','91985286394',3,7.5,14);
+INSERT INTO `lojas` VALUES (1,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',0,'Av. Dois Corações, 1245','91985284163',4,8,15),(2,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',0,'Rua Vasconcelos, 10','91987456329',5,9,15),(3,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',0,'Av. Pobre Juan, 236','91985286394',3,7.5,14);
 /*!40000 ALTER TABLE `lojas` ENABLE KEYS */;
 UNLOCK TABLES;
 
