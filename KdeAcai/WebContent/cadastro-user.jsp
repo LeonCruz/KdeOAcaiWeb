@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 <body>
-    <form action="" method="post">
+    <form action="cadastra-user.jsp" method="post">
         <label for="name">Nome</label><br>
         <input type="text" name="nome" placeholder="João da Silva"><br>
 
