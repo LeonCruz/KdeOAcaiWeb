@@ -2,7 +2,6 @@ package DAO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import controle.Conexao;
 import controle.ManipulacaoBanco;
 import modelo.Clientes;
 
@@ -38,6 +37,7 @@ public class ClientesDAO {
 			if(resultado.next()) {
 				id = resultado.getInt("id");
 				sql = String.format("DETETE FROM clientes WHERE id=%d", id);
+				ManipulacaoBanco.manipular(sql);
 				System.out.println("Cliente deletado!");
 			} else {
 				System.out.println("Login não existe");
@@ -54,7 +54,7 @@ public class ClientesDAO {
 		ResultSet resultado = consultarCliente(cliente);
 		int id;
 		
-		String sql;
+		String sql = "";
 		
 		String novoLogin = cliente.getLogin();
 		String novoNome = cliente.getNome();
@@ -79,6 +79,8 @@ public class ClientesDAO {
 				if(!novaSenha.equals("")) {
 					sql = String.format("UPDATE clientes SET senha='%s' WHERE id=%d", novaSenha, id);
 				}
+				
+				ManipulacaoBanco.manipular(sql);
 			}
 			
 		} catch (SQLException e) {
