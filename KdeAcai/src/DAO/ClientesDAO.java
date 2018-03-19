@@ -7,7 +7,7 @@ import modelo.Clientes;
 import modelo.Lojas;
 
 public class ClientesDAO {
-	public static void cadastrar(Clientes cliente) {
+	public static boolean cadastrar(Clientes cliente) {
 		// Função que realiza o cadastro do cliente
 		
 		ResultSet resultado = consultarCliente(cliente);
@@ -16,14 +16,17 @@ public class ClientesDAO {
 		try {
 			if(resultado.next()) {
 				System.out.println("Login já existe");
+				return false;
 			} else {
 				sql = String.format("INSERT INTO clientes VALUES('%s', '%s', '%s', '%s')", 
 						cliente.getLogin(), cliente.getNome(), cliente.getEmail(), cliente.getSenha());
 				ManipulacaoBanco.manipular(sql);
+				return true;
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+			return false;
 		}
 	}
 	
