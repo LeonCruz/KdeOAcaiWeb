@@ -10,8 +10,8 @@ public class LojasDAO {
 	public static void cadastrar(Lojas loja) {
 		// Função que cadastra uma loja
 		
-		String sql = String.format("INSERT INTO lojas VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
-				loja.getEmail(), loja.getSenha(), loja.getNome(), loja.getAvaliacao(), loja.getLocalizacao(), 
+		String sql = String.format("INSERT INTO lojas (email, senha, nome, avaliacao, localizacao, telefone, tipoFino, tipoMedio, tipoGrosso) VALUES('%s', '%s', '%s', '%f', '%s', '%f', '%f', '%f')",
+				loja.getEmail(), loja.getSenha(), loja.getNome(), 0, loja.getLocalizacao(), 
 				loja.getTelofone(), loja.getTipoFino(), loja.getTipoMedio(), loja.getTipoGrosso());
 		
 		ManipulacaoBanco.manipular(sql);
