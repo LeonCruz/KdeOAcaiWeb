@@ -7,15 +7,29 @@ import controle.ManipulacaoBanco;
 import modelo.Lojas;
 
 public class LojasDAO {
-	public static void cadastrar(Lojas loja) {
+	public static boolean cadastrar(Lojas loja) {
 		// Função que cadastra uma loja
 		
-		String sql = String.format("INSERT INTO lojas (email, senha, nome, avaliacao, localizacao, telefone, tipoFino, tipoMedio, tipoGrosso) VALUES('%s', '%s', '%s', '%f', '%s', '%f', '%f', '%f')",
-				loja.getEmail(), loja.getSenha(), loja.getNome(), 0, loja.getLocalizacao(), 
-				loja.getTelofone(), loja.getTipoFino(), loja.getTipoMedio(), loja.getTipoGrosso());
+		ResultSet resultado = consultarLoja(loja);
 		
-		ManipulacaoBanco.manipular(sql);
-		System.out.println("Loja cadastrada");
+		try {
+			if(resultado.next()) {
+				System.out.println("Loja já cadastrada!");
+				return false;
+			} else {
+				String sql = String.format("INSERT INTO lojas (email, senha, nome, avaliacao, localizacao, telefone, tipoFino, tipoMedio, tipoGrosso) VALUES('%s', '%s', '%s', '%f', '%s', '%f', '%f', '%f')",
+						loja.getEmail(), loja.getSenha(), loja.getNome(), 0, loja.getLocalizacao(), 
+						loja.getTelofone(), loja.getTipoFino(), loja.getTipoMedio(), loja.getTipoGrosso());
+			
+				ManipulacaoBanco.manipular(sql);
+				System.out.println("Loja cadastrada");
+				
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	public static void deletar(Lojas loja) {
