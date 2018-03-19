@@ -18,8 +18,9 @@ public class ClientesDAO {
 				System.out.println("Login já existe");
 				return false;
 			} else {
-				sql = String.format("INSERT INTO clientes VALUES('%s', '%s', '%s', '%s')", 
+				sql = String.format("INSERT INTO clientes(login, nome, email, senha) VALUES('%s', '%s', '%s', '%s')", 
 						cliente.getLogin(), cliente.getNome(), cliente.getEmail(), cliente.getSenha());
+				System.out.println(sql);
 				ManipulacaoBanco.manipular(sql);
 				return true;
 			}
@@ -116,7 +117,7 @@ public class ClientesDAO {
 	private static ResultSet consultarCliente(Clientes cliente) {
 		// Função que pesquisa no banco um login que já existe;
 		
-		String sql  = String.format("SELECT * FROM clientes WHERE login='%s'", cliente.getLogin());
+		String sql  = String.format("SELECT * FROM clientes WHERE login='%s' AND email='%s'", cliente.getLogin(), cliente.getEmail());
 		return ManipulacaoBanco.pegarCliente(sql);
 	}
 }
