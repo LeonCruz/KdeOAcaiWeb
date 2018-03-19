@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import controle.Conexao;
 import controle.ManipulacaoBanco;
 import modelo.Clientes;
+import modelo.Lojas;
 
 public class ClientesDAO {
 	public static void cadastrar(Clientes cliente) {
@@ -81,6 +82,27 @@ public class ClientesDAO {
 				}
 			}
 			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void avaliar(Clientes cliente, Lojas loja) {
+		// Função para realizar avaliação do cliente sobre uma loja
+		
+		String sql;
+		int idCliente;
+		int idLoja;
+		ResultSet resultadoCliente = consultarCliente(cliente);
+		ResultSet resultadoLoja = LojasDAO.consultarLoja(loja);
+		
+		try {
+			if(resultadoCliente.next() && resultadoLoja.next()) {
+				idCliente = resultadoCliente.getInt("id");
+				idLoja =  resultadoLoja.getInt("id_loja");
+				sql = String.format("INSERT INTO avaliacaocliente VALUES('%d', '%d', '%f')", idLoja, idCliente, cliente.getAvalicao());
+				ManipulacaoBanco.manipular(sql);
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
