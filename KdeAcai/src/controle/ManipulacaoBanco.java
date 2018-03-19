@@ -14,20 +14,35 @@ public class ManipulacaoBanco {
     public static Statement stm;
     
 	public static void manipular(String sql){
-		Conexao.conectar();
+		con = Conexao.conectar();
+		try {
+			stm = con.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		
 		try {
 			stm.executeUpdate(sql);
 			System.out.println("Cadastro realizado com sucesso");
 			
 		} catch (SQLException e) {
-			System.out.println("Erro ao realizar opera��o");
+			System.out.println("Erro ao realizar operação");
+			System.out.println(e);
 		}
 	}
 	
 	
 	public static ResultSet pegarLojas(String sql) {		
-		Conexao.conectar();
+		con = Conexao.conectar();
+		try {
+			stm = con.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		ResultSet resultado = null;
 		
 		try {
@@ -42,7 +57,14 @@ public class ManipulacaoBanco {
 	}
 	
 	public static ResultSet pegarCliente(String sql) {
-		Conexao.conectar();
+		con = Conexao.conectar();
+		try {
+			stm = con.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		ResultSet resultado = null;
 		
 		try {
@@ -50,7 +72,8 @@ public class ManipulacaoBanco {
 			System.out.println("Dados alterados com sucesso");
 			
 		} catch (SQLException e) {
-			System.out.println("Erro ao realizar opera��o");
+			System.out.println("Erro ao realizar operação");
+			System.out.println(e);
 		}
 		
 		return resultado;
