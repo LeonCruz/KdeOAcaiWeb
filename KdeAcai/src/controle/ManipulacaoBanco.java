@@ -17,7 +17,7 @@ public class ManipulacaoBanco {
 		Conexao.conectar();
 		
 		try {
-			int resultado = stm.executeUpdate(sql);
+			stm.executeUpdate(sql);
 			System.out.println("Cadastro realizado com sucesso");
 			
 		} catch (SQLException e) {
