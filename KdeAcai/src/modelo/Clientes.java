@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
 
 /**
@@ -14,6 +9,11 @@ public class Clientes {
     private String nome;
     private String email;
     private String senha;
+    private float avalicao;
+    
+    public float getAvalicao() {
+    	return avalicao;
+    }
 
     public String getLogin() {
         return login;
@@ -30,7 +30,11 @@ public class Clientes {
     public String getSenha() {
         return senha;
     }
-
+    
+    public void setAvaliacao(float avalicao) {
+    	this.avalicao = avalicao;
+    }
+    
     public void setLogin(String login) {
         this.login = login;
     }
