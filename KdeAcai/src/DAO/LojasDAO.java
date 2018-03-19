@@ -102,7 +102,7 @@ public class LojasDAO {
 		}
 	}
 	
-	private static ResultSet consultarLoja(Lojas loja) {
+	protected static ResultSet consultarLoja(Lojas loja) {
 		// Função que pesquisa no banco uma loja que já existe;
 		
 		String sql  = String.format("SELECT * FROM lojas WHERE email='%s'", loja.getEmail());
