@@ -7,18 +7,14 @@
 	</head>
 	<body>
 		<h1>Kde o Açai</h1>
-		<form type="form">
-			<div class="">
-				<div class="">
-					<input id="usuario" type="text" placeholder="UsuÃ¡rio">
-					<br>
-					<input id="senha" type="password" placeholder="Senha">
-					<br>
-					<a href="">Esqueceu sua senha?</a>
-					<br>
-					<input type="button" value="Login">
-				</div>
-			</div>
+		<form action="logar.jsp" method="post">
+			<input name="usuario" type="text" placeholder="Usuário" required>
+			<br>
+			<input name="senha" type="password" placeholder="Senha" required>
+			<br>
+			<a href="">Esqueceu sua senha?</a>
+			<br>
+			<input type="submit" value="Login">
 		</form>
 	</body>
 </html>

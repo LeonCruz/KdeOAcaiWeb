@@ -114,6 +114,27 @@ public class ClientesDAO {
 		}
 	}
 	
+	public static boolean login(Clientes cliente) {
+		// Função de login no sistema
+		
+		String sql = String.format("SELECT * FROM clientes WHERE login='%s' AND senha=md5('%s')", cliente.getLogin(), cliente.getSenha());
+		ResultSet resultado = ManipulacaoBanco.pegarCliente(sql);
+		
+		try {
+			if(resultado.next()) {
+				System.out.println("Login realizado com sucesso!");
+				return true;
+			} else {
+				System.out.println("Usuário ou senha incorretos!");
+				return false;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
 	private static ResultSet consultarCliente(Clientes cliente) {
 		// Função que pesquisa no banco um login que já existe;
 		
