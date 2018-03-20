@@ -18,7 +18,7 @@ public class ClientesDAO {
 				System.out.println("Login já existe");
 				return false;
 			} else {
-				sql = String.format("INSERT INTO clientes(login, nome, email, senha) VALUES('%s', '%s', '%s', '%s')", 
+				sql = String.format("INSERT INTO clientes(login, nome, email, senha) VALUES('%s', '%s', '%s', md5('%s'))", 
 						cliente.getLogin(), cliente.getNome(), cliente.getEmail(), cliente.getSenha());
 				System.out.println(sql);
 				ManipulacaoBanco.manipular(sql);
