@@ -10,22 +10,22 @@
 <body>
     <form action="cadastra-user.jsp" method="post">
         <label for="name">Nome</label><br>
-        <input type="text" name="nome" placeholder="João da Silva"><br>
+        <input type="text" name="nome" placeholder="João da Silva" required><br>
 
         <label for="username">Nome de Usuário</label><br>
-        <input type="text" name="username" placeholder="josilva"><br>
+        <input type="text" name="username" placeholder="josilva" required><br>
         
         <label for="email">E-mail</label><br>
-        <input type="email" name="email" placeholder="nome@exemplo.com"><br>
+        <input type="email" name="email" placeholder="nome@exemplo.com" required><br>
 
         <label for="confemail">Confirmação de E-mail</label><br>
-        <input type="email" name="confirmemail" placeholder="nome@exemplo.com"><br>
+        <input type="email" name="confirmemail" placeholder="nome@exemplo.com" required><br>
 
         <label for="pw">Senha</label><br>
-        <input type="password" name="pw" placeholder="********"><br>
+        <input type="password" name="pw" placeholder="********" required><br>
 
         <label for="confpw">Confirmação da Senha</label><br>
-        <input type="password" name="confirmpw" placeholder="********"><br>
+        <input type="password" name="confirmpw" placeholder="********" required><br>
 
         <input type="submit" value="Cadastrar">
     </form>
