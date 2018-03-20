@@ -9,6 +9,7 @@
 <body>
 
 <jsp:useBean class="modelo.Clientes" id="cliente"/>
+<%@ page import= "java.sql.ResultSet" %>
 
 <%
 	cliente.setLogin(request.getParameter("username"));
@@ -19,7 +20,11 @@
 	boolean cadastrou = DAO.ClientesDAO.cadastrar(cliente);
 	
 	if(cadastrou) {
-		response.sendRedirect("index.jsp");
+		ResultSet busca = DAO.ClientesDAO.login(cliente);
+		if(busca.next()){
+			session.setAttribute("ClienteID", busca.getInt("id"));
+			response.sendRedirect("index.jsp");
+		}
 	} else {
 		response.sendRedirect("cadastro-user.jsp");
 	}
