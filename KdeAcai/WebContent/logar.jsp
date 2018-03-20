@@ -11,17 +11,21 @@
 <jsp:useBean class="modelo.Clientes" id="cliente"/>
 <jsp:useBean class="modelo.Lojas" id="loja"/>
 
+<%@ page import= "java.sql.ResultSet" %>
+
 <%
 	cliente.setLogin(request.getParameter("usuario"));
 	cliente.setSenha(request.getParameter("senha"));
 	
-	boolean logou= DAO.ClientesDAO.login(cliente); 
+	ResultSet busca = DAO.ClientesDAO.login(cliente);
+	boolean logou= busca.next();
 %>
 
 <script>
 	if(<%= logou%>) {
 		alert("Login realizado com sucesso!");
 		window.location = "index.jsp"
+		<% session.setAttribute("ClienteID", busca.getInt("id")); %>
 	} else {
 		alert("Usuário ou senha incorretos!");
 		window.location = "login.jsp"

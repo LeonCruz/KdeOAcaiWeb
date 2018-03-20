@@ -14,23 +14,38 @@
 	
 	<jsp:useBean class="modelo.Lojas" id="loja"/>
 	
-	<%@ page import= "java.sql.ResultSet" %>
+	<%@ 
+		page import= "java.sql.ResultSet, java.util.ArrayList"
+	%>
 	
 	<%
-		int numTuplas = 0;
+		int numTuplas = 0, idCliente=0;
+		ArrayList<Integer> idLojas = new ArrayList<Integer>();
 	
 		ResultSet busca = DAO.LojasDAO.buscarLojas(request.getParameter("opcao"));
 		busca.last();
 		numTuplas = busca.getRow();
 		busca.first();
 		
+		try{
+			idCliente = Integer.parseInt(session.getAttribute("ClienteID").toString());
+		} catch(NullPointerException e) {
+			System.out.println(e);
+		}
+		
 		for(int i=0; i<numTuplas; i++) {
+			idLojas.add(busca.getInt("id"));
 	%>
 	
 		<div class="loja">
 			<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
 			<span class="endereco-loja"><%= busca.getString("localizacao") %></span>
-			<div class="estrelas"><%= busca.getFloat("avaliacao") %></div>
+			
+			<form action="" method="post">
+				<input type="radio" name="avalia" value="<% DAO.ClientesDAO.avaliar(idCliente, idLojas.get(i), 1); %>">
+				<div class="estrelas"><%= busca.getFloat("avaliacao") %></div>
+				<input type="radio" name="avalia" value="<% DAO.ClientesDAO.avaliar(idCliente, idLojas.get(i), 0); %>">
+			</form>
 			<div class="precos">
 				R$<span class="preco">
 					<%= busca.getFloat("tipoFino") %>
