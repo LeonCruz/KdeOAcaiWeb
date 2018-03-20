@@ -24,18 +24,31 @@
 		numTuplas = busca.getRow();
 		busca.first();
 		
+		for(int i=0; i<numTuplas; i++) {
 	%>
 	
 		<div class="loja">
-			<h2 class="titulo-loja"></h2>
-			<span class="endereco-loja"></span>
-			<div class="estrelas">*****</div>
+			<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
+			<span class="endereco-loja"><%= busca.getString("localizacao") %></span>
+			<div class="estrelas"><%= busca.getFloat("avaliacao") %></div>
 			<div class="precos">
-				<span class="preco"></span>
-				<span class="preco"></span>
-				<span class="preco"></span>
+				R$<span class="preco">
+					<%= busca.getFloat("tipoFino") %>
+				</span>
+				R$<span class="preco">
+					<%= busca.getFloat("tipoMedio") %>
+				</span>
+				R$<span class="preco">
+					<%= busca.getFloat("tipoGrosso") %>
+				</span>
 			</div>
 		</div>
+		<hr>
+		
+		<%
+			busca.next();
+			} 
+		%>
 	</main>
 </body>
 </html>
