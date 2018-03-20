@@ -28,7 +28,6 @@
 		cliente.setNome(busca.getString("nome"));
 		session.setAttibute("Cliente", cliente);
 		%>
-		alert("Login realizado com sucesso!");
 		window.location = "index.jsp"
 	} else {
 		alert("Usuário ou senha incorretos!");
