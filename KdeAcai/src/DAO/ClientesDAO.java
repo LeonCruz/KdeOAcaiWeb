@@ -106,7 +106,7 @@ public class ClientesDAO {
 			if(resultadoCliente.next() && resultadoLoja.next()) {
 				idCliente = resultadoCliente.getInt("id");
 				idLoja =  resultadoLoja.getInt("id_loja");
-				sql = String.format("INSERT INTO avaliacaocliente VALUES('%d', '%d', '%f')", idLoja, idCliente, cliente.getAvalicao());
+				sql = String.format("INSERT INTO avaliacaocliente VALUES('%d', '%d', '%d')", idLoja, idCliente, cliente.getAvalicao());
 				ManipulacaoBanco.manipular(sql);
 			}
 		} catch (SQLException e) {

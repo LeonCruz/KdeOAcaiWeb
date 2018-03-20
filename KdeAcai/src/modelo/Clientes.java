@@ -9,9 +9,9 @@ public class Clientes {
     private String nome;
     private String email;
     private String senha;
-    private float avalicao;
+    private int avalicao;
     
-    public float getAvalicao() {
+    public int getAvalicao() {
     	return avalicao;
     }
 
@@ -31,7 +31,7 @@ public class Clientes {
         return senha;
     }
     
-    public void setAvaliacao(float avalicao) {
+    public void setAvaliacao(int avalicao) {
     	this.avalicao = avalicao;
     }
     

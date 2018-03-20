@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `kde_acai` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `kde_acai`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: kde_acai
+-- Host: localhost    Database: kde_acai
 -- ------------------------------------------------------
--- Server version	5.7.21-log
+-- Server version	5.7.20-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,7 +25,7 @@ DROP TABLE IF EXISTS `avaliacaocliente`;
 CREATE TABLE `avaliacaocliente` (
   `id_loja` int(11) NOT NULL,
   `id_cliente` int(11) NOT NULL,
-  `avaliacao` float NOT NULL,
+  `avaliacao` int(1) NOT NULL,
   PRIMARY KEY (`id_loja`,`id_cliente`),
   KEY `id_cliente_idx` (`id_cliente`),
   CONSTRAINT `id_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -41,7 +39,7 @@ CREATE TABLE `avaliacaocliente` (
 
 LOCK TABLES `avaliacaocliente` WRITE;
 /*!40000 ALTER TABLE `avaliacaocliente` DISABLE KEYS */;
-INSERT INTO `avaliacaocliente` VALUES (1,1,3),(1,2,5),(1,3,3),(2,1,3),(2,2,4),(2,3,2),(3,1,2),(3,2,1),(3,3,5);
+INSERT INTO `avaliacaocliente` VALUES (1,1,1),(1,2,1),(1,3,0),(2,1,1),(2,2,1),(2,3,1),(3,1,0),(3,2,0),(3,3,1);
 /*!40000 ALTER TABLE `avaliacaocliente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -147,7 +145,7 @@ CREATE TABLE `lojas` (
   `tipoMedio` float NOT NULL,
   `tipoGrosso` float NOT NULL,
   PRIMARY KEY (`id`,`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,17 +154,9 @@ CREATE TABLE `lojas` (
 
 LOCK TABLES `lojas` WRITE;
 /*!40000 ALTER TABLE `lojas` DISABLE KEYS */;
-INSERT INTO `lojas` VALUES (1,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',3.66667,'Av. Dois Corações, 1245','91985284163',4,8,15),(2,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',3,'Rua Vasconcelos, 10','91987456329',5,9,15),(3,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',2.66667,'Av. Pobre Juan, 236','91985286394',3,7.5,14);
+INSERT INTO `lojas` VALUES (1,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',0.666667,'Av. Dois Corações, 1245','91985284163',4,8,15),(2,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',1,'Rua Vasconcelos, 10','91987456329',5,9,15),(3,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',0.333333,'Av. Pobre Juan, 236','91985286394',3,7.5,14),(12,'jorge@gmail.com','caf1a3dfb505ffed0d024130f58c5cfa','Açaí do Jorge',0,'Av. Estrella, 4005','9132557960',0,10.6,0);
 /*!40000 ALTER TABLE `lojas` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'kde_acai'
---
-
---
--- Dumping routines for database 'kde_acai'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -177,4 +167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-17 14:07:31
+-- Dump completed on 2018-03-20 14:16:18
