@@ -72,7 +72,6 @@ public class ManipulacaoBanco {
 			System.out.println("Dados alterados com sucesso");
 			
 		} catch (SQLException e) {
-			System.out.println(sql);
 			System.out.println("Erro ao realizar operação");
 			System.out.println(e);
 		}
