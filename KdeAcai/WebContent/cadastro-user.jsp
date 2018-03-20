@@ -6,6 +6,7 @@
     <title>Cadastro - Usuário</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/main.js"></script>
 </head>
 <body>
     <form action="cadastra-user.jsp" method="post">
@@ -16,16 +17,16 @@
         <input type="text" name="username" placeholder="josilva" required><br>
         
         <label for="email">E-mail</label><br>
-        <input type="email" name="email" placeholder="nome@exemplo.com" required><br>
+        <input type="email" name="email" id="email" placeholder="nome@exemplo.com" required><br>
 
         <label for="confemail">Confirmação de E-mail</label><br>
-        <input type="email" name="confirmemail" placeholder="nome@exemplo.com" required><br>
+        <input type="email" name="confirmemail" placeholder="nome@exemplo.com" required onfocusout="isEquals('email', this)"><br>
 
         <label for="pw">Senha</label><br>
-        <input type="password" name="pw" placeholder="********" required><br>
+        <input type="password" name="pw" id="pw" placeholder="********" required><br>
 
         <label for="confpw">Confirmação da Senha</label><br>
-        <input type="password" name="confirmpw" placeholder="********" required><br>
+        <input type="password" name="confirmpw" placeholder="********" required onfocusout="isEquals('pw', this)"><br>
 
         <input type="submit" value="Cadastrar">
     </form>

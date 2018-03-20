@@ -6,6 +6,7 @@
     <title>Cadastro - Loja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style_cadLoja.css" />
+    <script src="js/main.js"></script>
 </head>
 <body>
 	<div class="box">
@@ -14,10 +15,10 @@
 	        <input class="campText" type="text" name="nome" placeholder="Nome" required><br>
 	        
 	        <label for="email">E-mail</label><br>
-	        <input class="campText" type="email" name="email" placeholder="nome@exemplo.com" required><br>
+	        <input class="campText" type="email" name="email" id="email" placeholder="nome@exemplo.com" required><br>
 	
 	        <label for="confemail">Confirmação de E-mail</label><br>
-	        <input class="campText" type="email" name="confemail" placeholder="nome@exemplo.com" required><br>
+	        <input class="campText" type="email" name="confemail" placeholder="nome@exemplo.com" required onfocusout="isEquals('email', this)"><br>
 	
 	        <label for="localizacao">Endereço</label><br>
 	        <input class="campText" type="text" name="localizacao" placeholder="Tv. WE 30, 400, Coqueiro" required><br>
@@ -26,10 +27,10 @@
 	        <input class="campText" type="text" name="telefone" placeholder="9132556142" required><br>
 	
 	        <label for="pw">Senha</label><br>
-	        <input class="campText" type="password" name="pw" placeholder="********" required><br>
+	        <input class="campText" type="password" name="pw" id="pw" placeholder="********" required><br>
 	
 	        <label for="confpw">Confirmação da Senha</label><br>
-	        <input class="campText" type="password" name="confpw" placeholder="********" required><br>
+	        <input class="campText" type="password" name="confpw" placeholder="********" required onfocusout="isEquals('pw', this)"><br>
 	
 	        <h2>Preços</h2>
 	
@@ -42,7 +43,7 @@
 	        <label for="grosso">Açaí­ Grosso</label><br>
 	        <input class="campText" type="text" name="grosso" value=0 ><br>
 	
-	        <input class="btnCad" type="submit" value="Cadastrar">
+	        <input class="btnCad" type="submit" id="submit" value="Cadastrar">
 	   	</form>
 	 </div>
 </body>
