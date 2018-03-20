@@ -16,5 +16,6 @@
 			<br>
 			<input type="submit" value="Login">
 		</form>
+		<a href="cadastro-user.jsp"><button>Cadastrar-se</button></a>
 	</body>
 </html>

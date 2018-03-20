@@ -28,7 +28,9 @@
 
 </head>
 <body>
-	<header class="header-lojas"></header>
+	<header class="header-lojas">
+	<a href="index.jsp">Home</a>
+	</header>
 	<main class="principal">
 	
 	<jsp:useBean class="modelo.Lojas" id="loja"/>
