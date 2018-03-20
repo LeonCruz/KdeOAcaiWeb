@@ -7,6 +7,9 @@ import controle.ManipulacaoBanco;
 import modelo.Lojas;
 
 public class LojasDAO {
+	public static final String PRECO = "1";
+	public static final String CLASSIFICACAO = "2";
+	
 	public static boolean cadastrar(Lojas loja) {
 		// Função que cadastra uma loja
 		
@@ -114,6 +117,24 @@ public class LojasDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static ResultSet buscarLojas(String opcao) {
+		String sql = "SELECT * FROM lojas ORDER BY ";
+		
+		switch(opcao) {
+			case PRECO:
+				sql += "tipoMedio";
+				break;
+			case CLASSIFICACAO:
+				sql += "avaliacao";
+				break;
+			default:
+				System.out.println("Opção inválida!");
+				return null;
+		}
+		
+		return ManipulacaoBanco.pegarLojas(sql);
 	}
 	
 	protected static ResultSet consultarLoja(Lojas loja) {
