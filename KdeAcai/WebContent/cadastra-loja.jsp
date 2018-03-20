@@ -14,6 +14,11 @@
 	loja.setNome(request.getParameter("nome"));
 	loja.setEmail(request.getParameter("email"));
 	loja.setSenha(request.getParameter("pw"));
+	loja.setLocalizacao(request.getParameter("localizacao"));
+	loja.setTelefone(request.getParameter("telefone"));
+	loja.setTipoFino(request.getParameter("fino"));
+	loja.setTipoMedio(request.getParameter("medio"));
+	loja.setTipoGrosso(request.getParameter("grosso"));
 
 	boolean cadastrou = DAO.LojasDAO.cadastrar(loja);
 	

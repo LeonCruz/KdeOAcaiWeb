@@ -17,10 +17,10 @@ public class LojasDAO {
 				System.out.println("Loja já cadastrada!");
 				return false;
 			} else {
-				String sql = String.format("INSERT INTO lojas (email, senha, nome, avaliacao, localizacao, telefone, tipoFino, tipoMedio, tipoGrosso) VALUES('%s', '%s', '%s', '%f', '%s', '%f', '%f', '%f')",
+				String sql = String.format("INSERT INTO lojas (email, senha, nome, avaliacao, localizacao, telefone, tipoFino, tipoMedio, tipoGrosso) VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
 						loja.getEmail(), loja.getSenha(), loja.getNome(), 0, loja.getLocalizacao(), 
-						loja.getTelofone(), loja.getTipoFino(), loja.getTipoMedio(), loja.getTipoGrosso());
-			
+						loja.getTelefone(), loja.getTipoFino(), loja.getTipoMedio(), loja.getTipoGrosso());
+				
 				ManipulacaoBanco.manipular(sql);
 				System.out.println("Loja cadastrada");
 				
@@ -65,7 +65,7 @@ public class LojasDAO {
 		String novoNome = loja.getNome();
 		float novaAvalicao = loja.getAvaliacao();
 		String novaLocalizacao = loja.getLocalizacao();
-		String novoTelefone = loja.getTelofone();
+		String novoTelefone = loja.getTelefone();
 		float novoTipoFino = loja.getTipoFino();
 		float novoTipoMedio = loja.getTipoMedio();
 		float novoTipoGrosso = loja.getTipoGrosso();

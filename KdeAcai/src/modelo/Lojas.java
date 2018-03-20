@@ -16,7 +16,7 @@ public class Lojas {
     private String nome;
     private float avaliacao;
     private String localizacao;
-    private String telofone;
+    private String telefone;
     private float tipoFino;      
     private float tipoMedio;
     private float tipoGrosso;
@@ -41,8 +41,8 @@ public class Lojas {
         return localizacao;
     }
 
-    public String getTelofone() {
-        return telofone;
+    public String getTelefone() {
+        return telefone;
     }
 
     public float getTipoFino() {
@@ -56,6 +56,8 @@ public class Lojas {
     public float getTipoGrosso() {
         return tipoGrosso;
     }
+    
+    //Setters---------------------------------------------------
 
     public void setEmail(String email) {
         this.email = email;
@@ -77,20 +79,20 @@ public class Lojas {
         this.localizacao = localizacao;
     }
 
-    public void setTelofone(String telofone) {
-        this.telofone = telofone;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public void setTipoFino(float tipoFino) {
-        this.tipoFino = tipoFino;
+    public void setTipoFino(String tipoFino) {
+        this.tipoFino = Float.parseFloat(tipoFino);
     }
 
-    public void setTipoMedio(float tipoMedio) {
-        this.tipoMedio = tipoMedio;
+    public void setTipoMedio(String tipoMedio) {
+        this.tipoMedio =  Float.parseFloat(tipoMedio);
     }
 
-    public void setTipoGrosso(float tipoGrosso) {
-        this.tipoGrosso = tipoGrosso;
+    public void setTipoGrosso(String tipoGrosso) {
+        this.tipoGrosso =  Float.parseFloat(tipoGrosso);
     }
 }
 
