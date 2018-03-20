@@ -7,6 +7,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 <title>Lojas</title>
+
+<script type="text/javascript">
+	function avaliar(idLoja, idCliente, avaliacao) {
+		var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		      document.getElementById("demo").innerHTML =
+		      this.responseText;
+		    }
+		  };
+		  xhttp.open("POST", "avalia.jsp", true);
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  xhttp.send("idLoja="+idLoja+"&idCliente="+idCliente+"&avaliacao="+avaliacao);
+	}
+</script>
+
 </head>
 <body>
 	<header class="header-lojas"></header>
@@ -40,12 +56,14 @@
 		<div class="loja">
 			<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
 			<span class="endereco-loja"><%= busca.getString("localizacao") %></span>
-			
-			<form action="" method="post">
-				<input type="radio" name="avalia" value="<% DAO.ClientesDAO.avaliar(idCliente, idLojas.get(i), 1); %>">
+			<form>
+				 <label for="gostei">Gostei</label>
+				<input type="radio" id="gostei" name="avalia" onclick="avaliar(${lojas.get(i)}, <%= idCliente %>, this.value)" value="1">
 				<div class="estrelas"><%= busca.getFloat("avaliacao") %></div>
-				<input type="radio" name="avalia" value="<% DAO.ClientesDAO.avaliar(idCliente, idLojas.get(i), 0); %>">
+				<label for="ngostei">Não Gostei</label>
+				<input type="radio" id="ngostei" name="avalia" onclick="avaliar(${lojas.get(i)}, <%= idCliente %>, this.value)" value="0">
 			</form>
+			
 			<div class="precos">
 				R$<span class="preco">
 					<%= busca.getFloat("tipoFino") %>
