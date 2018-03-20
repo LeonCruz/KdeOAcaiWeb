@@ -29,7 +29,7 @@
 </head>
 <body>
 	<header class="header-lojas">
-	<a href="index.jsp">Home</a>
+		<a href="index.jsp">Home</a>
 	</header>
 	<main class="principal">
 	
@@ -62,7 +62,7 @@
 			<form>
 				 <label for="gostei">Gostei</label>
 				<input type="radio" id="gostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
-				<div class="estrelas"><%= busca.getFloat("avaliacao") %></div>
+				<div class="estrelas">Relevância: <%= busca.getFloat("avaliacao") * 100 %>%</div>
 				<label for="ngostei">Não Gostei</label>
 				<input type="radio" id="ngostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
 			</form>
