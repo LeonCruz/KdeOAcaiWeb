@@ -10,11 +10,11 @@
 </head>
 <body>
     <main class="main-index">
-	    <form action="" method="get">
+	    <form action="lojas.jsp" method="get">
 	        <img src="" alt="Logo">
-	        <input type="radio" name="opcao" id="classific" value="classific">
+	        <input type="radio" name="opcao" value="2">
 	        <label for="classific">Classificação</label>
-	        <input type="radio" name="opcao" id="preco" value="preco">
+	        <input type="radio" name="opcao" value="1">
 	        <label for="preco">Preço</label>
 	        
 	        <input type="submit" value="Buscar!">
