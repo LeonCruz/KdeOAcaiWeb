@@ -59,23 +59,25 @@
 		<div class="loja">
 			<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
 			<span class="endereco-loja"><%= busca.getString("localizacao") %></span>
-			<form>
-				 <label for="gostei">Gostei</label>
-				<input type="radio" id="gostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
-				<div class="estrelas">Relevância: <%= busca.getFloat("avaliacao") * 100 %>%</div>
-				<label for="ngostei">Não Gostei</label>
-				<input type="radio" id="ngostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
-			</form>
+			
+			<label for="gostei">Gostei</label>
+			<input type="radio" id="gostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
+			<div class="estrelas">Relevância: <%= busca.getFloat("avaliacao") * 100 %>%</div>
+			<label for="ngostei">Não Gostei</label>
+			<input type="radio" id="ngostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
 			
 			<div class="precos">
-				R$<span class="preco">
-					<%= busca.getFloat("tipoFino") %>
+				
+				<span class="preco">
+					Açaí Fino R$<%= busca.getFloat("tipoFino") %>
 				</span>
-				R$<span class="preco">
-					<%= busca.getFloat("tipoMedio") %>
+				<br />
+				<span class="preco">
+					Açaí Médio R$<%= busca.getFloat("tipoMedio") %>
 				</span>
-				R$<span class="preco">
-					<%= busca.getFloat("tipoGrosso") %>
+				<br />
+				<span class="preco">
+					Açaí Grosso R$<%= busca.getFloat("tipoGrosso") %>
 				</span>
 			</div>
 		</div>
