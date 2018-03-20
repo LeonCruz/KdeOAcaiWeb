@@ -1,0 +1,32 @@
+body{
+	background-color: #592a78;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.box{
+	background-color: #F50057;
+	padding: 20px;
+	height: 100%;
+	margin-top: 5%;
+}
+
+.campText{
+	background-color: #592a78;
+	border: 2px solid #EDE7F6;
+	color: #EDE7F6;
+	border-radius: 12px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.campText:focus{
+	border: 2px solid #FBC02D;
+	border-radius: 12px;
+}
+
+.btnCad{
+	
+}
