@@ -10,16 +10,19 @@
 
 <script type="text/javascript">
 	function avaliar(idLoja, idCliente, avaliacao) {
+		if(idCliente == -1) {
+			window.location = "login.jsp";
+		}
+		
 		var xhttp = new XMLHttpRequest();
-		  xhttp.onreadystatechange = function() {
-		    if (this.readyState == 4 && this.status == 200) {
-		      document.getElementById("demo").innerHTML =
-		      this.responseText;
-		    }
-		  };
-		  xhttp.open("POST", "avalia.jsp", true);
-		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		  xhttp.send("idLoja="+idLoja+"&idCliente="+idCliente+"&avaliacao="+avaliacao);
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+		    	console.log("Enviado com sucesso!");
+			}
+		};
+		xhttp.open("POST", "avalia.jsp", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("idLoja="+idLoja+"&idCliente="+idCliente+"&avaliacao="+avaliacao);
 	}
 </script>
 
@@ -31,12 +34,11 @@
 	<jsp:useBean class="modelo.Lojas" id="loja"/>
 	
 	<%@ 
-		page import= "java.sql.ResultSet, java.util.ArrayList"
+		page import= "java.sql.ResultSet"
 	%>
 	
 	<%
-		int numTuplas = 0, idCliente=0;
-		ArrayList<Integer> idLojas = new ArrayList<Integer>();
+		int numTuplas = 0, idCliente=-1;
 	
 		ResultSet busca = DAO.LojasDAO.buscarLojas(request.getParameter("opcao"));
 		busca.last();
@@ -50,7 +52,6 @@
 		}
 		
 		for(int i=0; i<numTuplas; i++) {
-			idLojas.add(busca.getInt("id"));
 	%>
 	
 		<div class="loja">
@@ -58,10 +59,10 @@
 			<span class="endereco-loja"><%= busca.getString("localizacao") %></span>
 			<form>
 				 <label for="gostei">Gostei</label>
-				<input type="radio" id="gostei" name="avalia" onclick="avaliar(${lojas.get(i)}, <%= idCliente %>, this.value)" value="1">
+				<input type="radio" id="gostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
 				<div class="estrelas"><%= busca.getFloat("avaliacao") %></div>
 				<label for="ngostei">Não Gostei</label>
-				<input type="radio" id="ngostei" name="avalia" onclick="avaliar(${lojas.get(i)}, <%= idCliente %>, this.value)" value="0">
+				<input type="radio" id="ngostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
 			</form>
 			
 			<div class="precos">

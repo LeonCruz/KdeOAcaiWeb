@@ -4,9 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>avalia loja/title>
 </head>
 <body>
+
+<%
+
+	int idCliente = Integer.parseInt(request.getParameter("idCliente")),
+		idLoja = Integer.parseInt(request.getParameter("idLoja")),
+		avaliacao = Integer.parseInt(request.getParameter("avaliacao"));
+	System.out.printf("ID Cliente: %d", idCliente);
+
+	DAO.ClientesDAO.avaliar(idCliente, idLoja, avaliacao);
+%>
 
 </body>
 </html>

@@ -127,7 +127,7 @@ public class LojasDAO {
 				sql += "tipoMedio";
 				break;
 			case CLASSIFICACAO:
-				sql += "avaliacao";
+				sql += "avaliacao DESC";
 				break;
 			default:
 				System.out.println("Opção inválida!");

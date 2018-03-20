@@ -23,9 +23,9 @@
 
 <script>
 	if(<%= logou%>) {
+		<% session.setAttribute("ClienteID", busca.getInt("id")); %>
 		alert("Login realizado com sucesso!");
 		window.location = "index.jsp"
-		<% session.setAttribute("ClienteID", busca.getInt("id")); %>
 	} else {
 		alert("Usuário ou senha incorretos!");
 		window.location = "login.jsp"

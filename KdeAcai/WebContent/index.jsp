@@ -12,9 +12,9 @@
     <main class="main-index">
 	    <form action="lojas.jsp" method="get">
 	        <img src="" alt="Logo">
-	        <input type="radio" name="opcao" value="2">
+	        <input type="radio" name="opcao" id="classific" value="2">
 	        <label for="classific">Classificação</label>
-	        <input type="radio" name="opcao" value="1">
+	        <input type="radio" name="opcao" id="preco" value="1">
 	        <label for="preco">Preço</label>
 	        
 	        <input type="submit" value="Buscar!">

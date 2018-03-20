@@ -100,12 +100,14 @@ public class ClientesDAO {
 		ResultSet resultado = ManipulacaoBanco.pegarCliente(sql);
 		
 		try {
-			if(resultado.next()) {
+			if(!resultado.next()) {
 				sql = String.format("INSERT INTO avaliacaocliente VALUES('%d', '%d', '%d')", idLoja, idCliente, avaliacao);
 				ManipulacaoBanco.manipular(sql);
+				System.out.println("Inseriu avaliação!");
 			} else {
 				sql = String.format("UPDATE avaliacaocliente SET avaliacao='%d' WHERE id_loja='%d' AND id_cliente='%d'", avaliacao, idLoja, idCliente);
 				ManipulacaoBanco.manipular(sql);
+				System.out.println("Alterou avaliação!");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
