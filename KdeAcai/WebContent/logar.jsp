@@ -23,7 +23,11 @@
 
 <script>
 	if(<%= logou%>) {
-		<% session.setAttribute("ClienteID", busca.getInt("id")); %>
+		<% 
+		session.setAttribute("ClienteID", busca.getInt("id"));
+		cliente.setNome(busca.getString("nome"));
+		session.setAttibute("Cliente", cliente);
+		%>
 		alert("Login realizado com sucesso!");
 		window.location = "index.jsp"
 	} else {
