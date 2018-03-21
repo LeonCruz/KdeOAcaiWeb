@@ -6,7 +6,6 @@
     <title>Kde O Açaí?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <main class="main-index">
@@ -24,6 +23,9 @@
     </main>
     <footer class="footer-index">
         <a href="cadastro-loja.jsp"><button>Cadastrar Loja</button></a>
+        <div class="copy">
+        	<p>Copyright 2018 - Indie Atom</p>
+        </div>
     </footer>
 </body>
 </html>
