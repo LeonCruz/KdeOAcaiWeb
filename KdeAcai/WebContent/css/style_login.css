@@ -25,7 +25,7 @@ h1{
 	background-color: #592a78;
 	border: 1px solid #EDE7F6;
 	color: #fafafa;
-    border-radius: 8px;
+    	border-radius: 8px;
 	padding: 10px 20px;
 	cursor: pointer;
 	margin-bottom: 20px;
@@ -39,8 +39,8 @@ h1{
 }
 
 ::placeholder {
-    color:#B39DDB;
-    opacity: 1;
+	color:#B39DDB;
+	opacity: 1;
 }
 
 .btn{
@@ -65,8 +65,8 @@ h1{
 }
 
 .btn:hover {
-    background-color: #F8BBD0;
-    color: #EDE7F6;
+	background-color: #F8BBD0;
+	color: #EDE7F6;
 }
 
 a{
@@ -76,9 +76,9 @@ a{
 }
 
 a:hover {
-    color: whitesmoke;
+	color: whitesmoke;
 }
 
 a:active {
-    color: rgb(247, 148, 148);
+	color: rgb(247, 148, 148);
 }
