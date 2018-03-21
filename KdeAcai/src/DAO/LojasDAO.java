@@ -119,8 +119,9 @@ public class LojasDAO {
 		}
 	}
 	
-	public static ResultSet buscarLojas(String opcao) {
-		String sql = "SELECT * FROM lojas ORDER BY ";
+	
+	public static ResultSet buscarLojas(String nomeLoja, String opcao) {
+		String sql = "SELECT * FROM lojas WHERE nome LIKE '%"+nomeLoja+"%' ORDER BY ";
 		
 		switch(opcao) {
 			case PRECO:

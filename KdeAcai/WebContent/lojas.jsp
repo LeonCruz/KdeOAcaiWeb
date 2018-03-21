@@ -41,8 +41,11 @@
 	
 	<%
 		int numTuplas = 0, idCliente=-1;
-	
-		ResultSet busca = DAO.LojasDAO.buscarLojas(request.getParameter("opcao"));
+		String nomeLoja = request.getParameter("nome");
+		ResultSet busca;
+		
+		busca = DAO.LojasDAO.buscarLojas(nomeLoja, request.getParameter("opcao"));
+		
 		busca.last();
 		numTuplas = busca.getRow();
 		busca.first();
@@ -53,12 +56,18 @@
 			System.out.println(e);
 		}
 		
+		if(numTuplas == 0) {
+			%>
+			<span class="error">Ops! Nenhuma loja foi encontrada :/</span>
+			<%
+		}
+		
 		for(int i=0; i<numTuplas; i++) {
 	%>
 	
 		<div class="loja">
 			<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
-			<span class="endereco-loja"><%= busca.getString("localizacao") %></span>
+			<span class="endereco-loja"><%= busca.getString("localizacao") %></span> <br />
 			
 			<label for="gostei">Gostei</label>
 			<input type="radio" id="gostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
