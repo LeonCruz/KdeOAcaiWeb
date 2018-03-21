@@ -1,0 +1,37 @@
+* {
+	outline: none;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	position: absolute;
+	width: 100%;
+}
+
+.header-lojas {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	
+	background: rgba(225,190,231 ,.3);
+}
+
+.principal {
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px 25px;
+	border-radius: 20px;
+	
+	width: 85%;	
+	
+	background: #FAFAFA;
+}
+
+.loja:not(:last-child) {
+	border-bottom: 2px solid #EEEEEE;
+}
