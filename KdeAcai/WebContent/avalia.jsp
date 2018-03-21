@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>avalia loja/title>
+<title>avalia loja</title>
 </head>
 <body>
 
