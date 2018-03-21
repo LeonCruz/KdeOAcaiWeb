@@ -2,20 +2,23 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style_login.css" />
 		<title>Login</title>
 	</head>
 	<body>
-		<h1>Kde o Açai</h1>
-		<form action="logar.jsp" method="post">
-			<input name="usuario" type="text" placeholder="Usuário" required>
-			<br>
-			<input name="senha" type="password" placeholder="Senha" required>
-			<br>
-			<a href="">Esqueceu sua senha?</a>
-			<br>
-			<input type="submit" value="Login">
-		</form>
-		<a href="cadastro-user.jsp"><button>Cadastrar-se</button></a>
+		<div class="box">
+			<h1>Kde o Açaí?</h1>
+			<form action="logar.jsp" method="post">
+				<input class="txt" name="usuario" type="text" placeholder="Usuário" required>
+				<br>
+				<input class="txt" name="senha" type="password" placeholder="Senha" required>
+				<br>
+				<input class="btn" type="submit" value="LOGIN">
+				<a href="cadastro-user.jsp"><input class="btn" type="button" value="CADASTRAR-SE"></a>
+				<br>
+				<a href="">Esqueceu sua senha?</a>
+			</form>
+			
+		</div>
 	</body>
 </html>
