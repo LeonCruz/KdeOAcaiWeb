@@ -21,17 +21,21 @@ body {
 }
 
 .principal {
-	margin-top: 70px;
+	margin-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 15px 25px;
-	border-radius: 20px;
+	padding: 5px;
+	border-radius: 5px;
 	
 	width: 85%;	
 	
-	background: #FAFAFA;
+	background: #EDE7F6;
 }
 
-.loja:not(:last-child) {
-	border-bottom: 2px solid #EEEEEE;
+.loja {
+	margin: 10px;
+	padding: 10px 20px;
+	border-radius: 20px;
+	
+	background: #FFFFFF;
 }
