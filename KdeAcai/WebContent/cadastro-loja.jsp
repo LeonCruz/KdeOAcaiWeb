@@ -31,18 +31,22 @@
         <label for="confpw">Confirmação da Senha</label><br>
         <input class="campText" type="password" name="confpw" placeholder="********" required onfocusout="isEquals('pw', this)"><br>
 
-        <h2>Preços</h2>
+        <label><h2>Preços</h2></label>
 
         <label for="fino">Açaí­ Fino</label><br>
-        <input class="campText" type="text" name="fino" value=0 ><br>
+        <input class="campText" type="text" name="fino" placeholder="0,00"><br>
 
         <label for="medio">Açaí­ Médio</label><br>
-        <input class="campText" type="text" name="medio" value=0 required><br>
+        <input class="campText" type="text" name="medio" placeholder="0,00" required><br>
 
         <label for="grosso">Açaí­ Grosso</label><br>
-        <input class="campText" type="text" name="grosso" value=0 ><br>
+        <input class="campText" type="text" name="grosso" placeholder="0,00"><br>
 
-        <input class="btnCad" type="submit" id="submit" value="Cadastrar">
+        <input type="submit" id="submit" value="Cadastrar">
+        <a href="index.jsp">
+        	<input type="button" value="Cancelar">
+        </a>
    	</form>
+   		<img  title="Loja Açai" alt="Loja Açai" src="https://uploaddeimagens.com.br/images/001/341/213/full/aqui.png?1521741462">
 </body>
 </html>

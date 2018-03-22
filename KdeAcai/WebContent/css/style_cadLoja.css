@@ -3,7 +3,7 @@
 }
 
 body{
-	background-color: #592a78;
+	background-color: #FAFAFA;
 	height: 100%;
 }
 
@@ -13,8 +13,10 @@ label{
 }
 
 .box{
-	background-color: rgba(250, 250, 250, 0.4);
+	background-color: rgba(87, 16, 71, 0.7);
+	z-index: 3;
 	padding: 20px;
+	margin-left: 5%;
 	width: 13%;
 	margin-top: 3%;
 	border-radius: 20px;
@@ -22,19 +24,24 @@ label{
 }
 
 .campText{
-	background-color: #592a78;
-	border: 1px solid #EDE7F6;
-	color: #fafafa;
+	background-color: #fafafa;
+	color: #592a78;
 	width: 100%;
    	border-radius: 8px;
 	padding: 10px 1px;
 	cursor: pointer;
 	margin-bottom: 10px;
+	transition: 0.3s;
+	cursor: auto;
+	border: 1px solid #E1BEE7;
+   	border-bottom-left-radius: 8px;
+   	border-top-left-radius: 8px;
+   	border-right: none;
 }
 
 .campText:focus{
-	border: 2px solid #FBC02D;
-	border-radius: 12px;
+	border: 1px solid  #4A148C;
+	border-right: none;
 }
 
 
@@ -44,11 +51,12 @@ label{
 }
 
 ::placeholder {
-	color:#B39DDB;
+	color: #676767;
+	font-style: italic;
 	opacity: 1;
 }
 
-.btnCad{
+input[type=submit],input[type=button]{
 	background-color: #F06292;
 	border: 2px;
 	border-radius: 4px;
@@ -65,4 +73,11 @@ label{
 	margin-right: 2px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+img{
+	position: absolute;
+	z-index: 1;
+	top: 3%;
+	right: 5%; 
 }
