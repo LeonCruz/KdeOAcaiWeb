@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+	outline: none;
+}
+
+body{
+	background-color: #FAFAFA;
+	height: 100%;
+}
+
+label{
+	font-family: Arial;
+	color: #EDE7F6;
+}
+
+.box{
+	background-color: #592A78;
+	padding: 20px;
+	margin-left: 5%;
+	width: 13%;
+	margin-top: 3%;
+	border-radius: 20px;
+	box-shadow: 5px 10px 15px #5b5b5b;
+}
+
+.campText{
+	background-color: #fafafa;
+	color: #592a78;
+	width: 100%;
+   	border-radius: 8px;
+	padding: 10px 1px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	transition: 0.3s;
+	cursor: auto;
+	border: 1px solid #E1BEE7;
+   	border-bottom-left-radius: 8px;
+   	border-top-left-radius: 8px;
+   	border-right: none;
+   	padding-left: 5px;
+}
+
+.campText:focus{
+	border: 1px solid  #4A148C;
+	border-right: none;
+}
+
+.txt:focus{
+	border: 1px solid #F48FB1;
+	border-radius: 8px;
+}
+
+::placeholder {
+	color: #676767;
+	font-style: italic;
+	opacity: 1;
+}
+
+input[type=submit],input[type=button]{
+	background-color: #F06292;
+	border: 2px;
+	border-radius: 4px;
+	text-align: center;
+	color: #EDE7F6;
+	font-family: 'Open Sans';
+	font-size: 1em;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+input[type=submit]:hover,input[type=button]:hover {
+	background-color: #F8BBD0;
+	color: #EDE7F6;
+}
+
+img{
+	position: absolute;
+	top: 20%;
+	right: 20%;
+}

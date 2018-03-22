@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cadastro - Loja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style_cadLoja.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style_cad.css" />
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -47,6 +47,6 @@
         	<input type="button" value="Cancelar">
         </a>
    	</form>
-   		<img  title="Loja Açai" alt="Loja Açai" src="https://uploaddeimagens.com.br/images/001/341/213/full/aqui.png?1521741462">
+   		<img title="Loja Açai" alt="Loja Açai" src="https://uploaddeimagens.com.br/images/001/341/213/full/aqui.png?1521741462">
 </body>
 </html>
