@@ -29,6 +29,23 @@
 <body>
 	<header class="header-lojas">
 		<a href="index.jsp">Home</a>
+		
+		<%		
+		try{
+			if(session.getAttribute("ClienteID").toString().equals("-1")) {
+				%>
+				<a href="login.jsp">Entrar</a>
+				<%
+			} else {
+				%>
+				<span class="nome-user">Olá, <%= session.getAttribute("ClienteNome") %></span>
+				<a href="logout.jsp">Sair</a>
+				<%
+			}
+		} catch (NullPointerException e)  {
+			System.out.println(e);
+		}
+		%>
 	</header>
 	<main class="principal">
 	
