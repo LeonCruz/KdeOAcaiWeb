@@ -1,25 +1,104 @@
 *{
 	outline: none;
 }
+
+* {
+    box-sizing: border-box;
+}
+/******************************************/
+}
 body{
 	background-color: #FAFAFA;
 }
-
 .box{
-	background-color: rgba(89, 42, 120, 0.4);;
-	position: absolute;
-	top: 5%;
-	left: 15%;
-	width: 1300px;/*
-	height: ;*/
-	padding: 20px;
-	align-content: center;
 	
+	
+	padding: 15px;
+	text-align: center;
+	margin-top: 100px;	
 }
 
 img{
-	width: 400px;
-	margin-left: 450px;
-	margin-bottom: 50px;
+	width: 250px;
 
+}
+
+/******************************************/
+
+/*.boxSearch{
+	border: 1px solid red;
+	width: 21%;
+	padding-right: 0px; 
+	padding-left: 0px;
+}*/
+
+input[type=text]{
+	background-color: #fafafa;
+	color: #592a78;
+
+    font-size: 15px;
+    width: 20%;
+    height: 2%;
+	
+
+	border: 1px solid #E1BEE7;
+   	border-bottom-left-radius: 8px;
+   	border-top-left-radius: 8px;
+   	border-right: none;
+
+	padding: 10px 10px;
+	margin-bottom: 10px;
+	
+	cursor: auto;
+	transition: 0.3s;
+}
+
+.btnSeach{
+	background-color: #fafafa;
+	color: #592a78;
+
+    font-size: 15px;
+    width: 5%;
+    height: 2%;
+
+
+	border: 1px solid #E1BEE7;
+   	border-top-right-radius: 8px;
+   	border-bottom-right-radius: 8px;
+   	border-left: none;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: -1px;
+
+	margin-bottom: 10px;
+	margin-left: -6px;
+
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+input[type=text]:focus{
+	border: 1px solid  #4A148C;
+	border-right: none;
+	 	
+}
+
+input[type=text]:focus:focus ~ span #btnBuscar{
+	border: 1px solid  #4A148C;
+	border-left: none;
+
+}
+
+::placeholder {
+	color: #E1BEE7;
+	opacity: 1;
+
+}
+
+
+
+.copy{
+	position: absolute;
+	top: 95%;
 }
