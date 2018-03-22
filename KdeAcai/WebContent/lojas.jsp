@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" media="screen" href="css/style-lojas.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/style_lojas.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/radio-btn.css" />
 <title>Lojas</title>
 
 <script type="text/javascript">
@@ -86,15 +87,18 @@
 	%>
 	
 		<div class="loja">
-			<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
-			<span class="endereco-loja"><%= busca.getString("localizacao") %></span> <br />
-			
-			<label for="gostei">Gostei</label>
-			<input type="radio" id="gostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
-			<div class="estrelas">Relevância: <%= busca.getFloat("avaliacao") * 100 %>%</div>
-			<label for="ngostei">Não Gostei</label>
-			<input type="radio" id="ngostei" name="avalia" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
-			
+			<div class="conteudo-loja">
+				<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
+				<span class="endereco-loja"><%= busca.getString("localizacao") %></span> <br />
+				
+				<div class="avaliacao">
+					<input type="radio" id="gostei" name="avalia<%= i %>" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
+					<label for="gostei"><span class="s"></span>Gostei</label>
+					<input type="radio" id="ngostei" name="avalia<%= i %>" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
+					<label for="ngostei"><span class="n"></span>Não Gostei</label>
+				</div>
+				<div class="estrelas">Relevância: <%= busca.getFloat("avaliacao") * 100 %>%</div>
+			</div>
 			<div class="precos">
 				
 				<span class="preco">

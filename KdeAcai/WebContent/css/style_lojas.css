@@ -78,3 +78,21 @@ a.index {
 	
 	background: #FFFFFF;
 }
+
+.avaliacao {
+	display: flex;
+}
+
+.conteudo-loja {
+}
+
+.precos {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+}
+
+.preco {
+	padding: 3px;
+}
