@@ -5,6 +5,7 @@
     <title>Kde O Açaí?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style_index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <main class="main-index">
@@ -12,9 +13,13 @@
 	    <form action="lojas.jsp" method="get">
 	        <img src="img/logotemp.png" alt="Logo">
 	        <br>
+
 	        <input type="text" name="nome" placeholder="Ex.: Açaí do Beto" />
-            <input type="submit" value="Buscar!">
+            <span>
+                <button id="btnBuscar" class="btnSeach" type="submit"><i class="fa fa-search"></i></button>
+            </span>
             <br>
+
 	        <input type="radio" name="opcao" id="classific" value="2" required>
 	        <label for="classific">Classificação</label>
 	        <input type="radio" name="opcao" id="preco" value="1" required>
