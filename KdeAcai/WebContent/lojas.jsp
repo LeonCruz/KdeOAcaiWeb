@@ -28,18 +28,22 @@
 </head>
 <body>
 	<header class="header-lojas">
-		<a href="index.jsp">Home</a>
+		<a class="index" href="index.jsp">Home</a>
 		
 		<%		
 		try{
 			if(session.getAttribute("ClienteID").toString().equals("-1")) {
 				%>
+				<div class="login">
 				<a href="login.jsp">Entrar</a>
+				</div>
 				<%
 			} else {
 				%>
+				<div class="login">
 				<span class="nome-user">Olá, <%= session.getAttribute("ClienteNome") %></span>
 				<a href="logout.jsp">Sair</a>
+				</div>
 				<%
 			}
 		} catch (NullPointerException e)  {
