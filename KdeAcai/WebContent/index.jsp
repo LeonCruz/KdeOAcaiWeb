@@ -20,10 +20,15 @@
             </span>
             <br>
 
+            <label class="container" id="classi" for="classific">Classificação
 	        <input type="radio" name="opcao" id="classific" value="2" required>
-	        <label for="classific">Classificação</label>
+            <span class="checkmark"></span>
+            </label>
+	        
+            <label class="container" id="prec" for="preco">Preço
 	        <input type="radio" name="opcao" id="preco" value="1" required>
-	        <label for="preco">Preço</label>
+            <span class="checkmark"></span>
+            </label>
 	        
 	        
 	    </form>
