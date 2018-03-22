@@ -73,11 +73,17 @@ a{
 	color: #B39DDB;	
 }
 
-a:hover {
+.forget{
+	font-family: Arial;
+	text-decoration: none;
+	color: #B39DDB;	
+}
+
+.forget:hover {
 	color: whitesmoke;
 }
 
-a:active {
+.forget:active {
 	color: rgb(247, 148, 148);
 }
 
