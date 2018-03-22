@@ -23,6 +23,7 @@
 		ResultSet busca = DAO.ClientesDAO.login(cliente);
 		if(busca.next()){
 			session.setAttribute("ClienteID", busca.getInt("id"));
+			session.setAttribute("ClienteNome", busca.getString("nome"));
 			response.sendRedirect("index.jsp");
 		}
 	} else {
