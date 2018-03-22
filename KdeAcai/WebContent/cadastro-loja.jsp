@@ -34,13 +34,13 @@
         <label><h2>Preços</h2></label>
 
         <label for="fino">Açaí­ Fino</label><br>
-        <input class="campText" type="text" name="fino" placeholder="0,00"><br>
+        <input class="campText" type="text" name="fino" value="0"><br>
 
         <label for="medio">Açaí­ Médio</label><br>
-        <input class="campText" type="text" name="medio" placeholder="0,00" required><br>
+        <input class="campText" type="text" name="medio" value="0" required><br>
 
         <label for="grosso">Açaí­ Grosso</label><br>
-        <input class="campText" type="text" name="grosso" placeholder="0,00"><br>
+        <input class="campText" type="text" name="grosso" value="0"><br>
 
         <input type="submit" id="submit" value="Cadastrar">
         <a href="index.jsp">
