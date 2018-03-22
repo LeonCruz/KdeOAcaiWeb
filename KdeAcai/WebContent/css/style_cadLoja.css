@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 *{
 	outline: none;
 }
@@ -13,8 +15,7 @@ label{
 }
 
 .box{
-	background-color: rgba(87, 16, 71, 0.7);
-	z-index: 3;
+	background-color: #592A78;
 	padding: 20px;
 	margin-left: 5%;
 	width: 13%;
@@ -37,13 +38,13 @@ label{
    	border-bottom-left-radius: 8px;
    	border-top-left-radius: 8px;
    	border-right: none;
+   	padding-left: 5px;
 }
 
 .campText:focus{
 	border: 1px solid  #4A148C;
 	border-right: none;
 }
-
 
 .txt:focus{
 	border: 1px solid #F48FB1;
@@ -60,24 +61,21 @@ input[type=submit],input[type=button]{
 	background-color: #F06292;
 	border: 2px;
 	border-radius: 4px;
-	padding-right: 15px;
-	padding-left: 15px;
-	padding-top: 5px; 
-	padding-bottom: 5px;
 	text-align: center;
 	color: #EDE7F6;
-	font-family: Arial;
-	font-size: 12px;
+	font-family: 'Open Sans';
+	font-size: 1em;
 	cursor: pointer;
 	transition: 0.3s;
-	margin-right: 2px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+}
+
+input[type=submit]:hover,input[type=button]:hover {
+	background-color: #F8BBD0;
+	color: #EDE7F6;
 }
 
 img{
 	position: absolute;
-	z-index: 1;
-	top: 3%;
-	right: 5%; 
+	top: 20%;
+	right: 20%;
 }
