@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 *{
 	outline: none;
 }
 body{
-	background-color: #592a78;
+	background-color: #FAFAFA;
 }
 
 .box{
-	background-color: rgba(89, 42, 120, 0.4);
+	background-color: #592A78;
 	position: absolute;
 	top: 30%;
 	left: 70%;
-	width: 200px;
-	height: 300px;
-	padding: 20px;
+	padding: 50px;
+	border-radius: 20px;
+	box-shadow: 5px 10px 15px #5b5b5b;
 }
 
 h1{
@@ -21,13 +23,14 @@ h1{
 }
 
 .txt{
-	background-color: #592a78;
-	border: 1px solid #EDE7F6;
-	color: #fafafa;
+	background-color: #FAFAFA;
+	border: 1px solid #E1BEE7;
+	color: #592a78;
    	border-radius: 8px;
 	padding: 10px 20px;
-	cursor: pointer;
+	cursor: auto;
 	margin-bottom: 20px;
+	transition: 0.3s;
 }
 
 .txt:focus{
@@ -50,7 +53,7 @@ h1{
 	padding-bottom: 5px;
 	text-align: center;
 	color: #EDE7F6;
-	font-family: Arial;
+	font-family: 'Open Sans';
 	font-size: 12px;
 	cursor: pointer;
 	transition: 0.3s;
@@ -70,10 +73,22 @@ a{
 	color: #B39DDB;	
 }
 
-a:hover {
+.forget{
+	font-family: Arial;
+	text-decoration: none;
+	color: #B39DDB;	
+}
+
+.forget:hover {
 	color: whitesmoke;
 }
 
-a:active {
+.forget:active {
 	color: rgb(247, 148, 148);
+}
+
+img{
+	position: absolute;
+	top: 30%;
+	left: 20%; 
 }
