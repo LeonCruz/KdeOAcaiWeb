@@ -18,7 +18,7 @@
 				<br>
 				<a href="">Esqueceu sua senha?</a>
 			</form>
-			
 		</div>
+		<img title="Login" alt="Login" src="http://www.agregacoworking.com.br/wp-content/uploads/2017/03/coworking-illustration.png">
 	</body>
 </html>
