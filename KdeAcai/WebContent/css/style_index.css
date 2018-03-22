@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
 *{
 	outline: none;
+	box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
-}
 /******************************************/
 }
-body{
+html, body{
 	background-color: #FAFAFA;
+	margin: 0;
+	width: 100%;
 }
 .box{
 	
@@ -27,7 +31,7 @@ img{
 
 input[type=text]{
 	background-color: #fafafa;
-	color: #592a78;
+	color: #571047;
 
     font-size: 15px;
     width: 20%;
@@ -52,25 +56,26 @@ input[type=text]{
 	color: #592a78;
 
     font-size: 15px;
-    width: 5%;
+    width: 3%;
     height: 2%;
 
 
 	border: 1px solid #E1BEE7;
-  	border-top-right-radius: 8px;
+	border-top-right-radius: 8px;
    	border-bottom-right-radius: 8px;
    	border-left: none;
 
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: -20px;
-	padding-right: -20;
+	
 
 	margin-bottom: 20px;
 	margin-left: -6px;
-
-	cursor: pointer;
 	transition: 0.3s;
+}
+
+.fa-search{
+	cursor: pointer;
 }
 
 input[type=text]:focus{
@@ -86,9 +91,9 @@ input[type=text]:focus:focus ~ span #btnBuscar{
 }
 
 ::placeholder {
-	color: #E1BEE7;
+	color: #676767;
+	font-style: italic;
 	opacity: 1;
-
 }
 
 /*************************RADIO***************/
@@ -100,7 +105,8 @@ input[type=text]:focus:focus ~ span #btnBuscar{
     padding-left: 30px;
     margin-bottom: 2px;
     cursor: pointer;
-    font-size: 22px;
+    font-family: 'Open Sans';
+    font-size: 1em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -130,8 +136,8 @@ input[type=text]:focus:focus ~ span #btnBuscar{
     position: absolute;
     top: 0;
     left: 0;
-    height: 24px;
-    width: 25px;
+    height: 21px;
+    width: 22px;
     background-color: #eee;
     border-radius: 50%;
 }
@@ -143,7 +149,7 @@ input[type=text]:focus:focus ~ span #btnBuscar{
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-    background-color: #4A148C;
+    background-color: #571047;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -170,7 +176,41 @@ input[type=text]:focus:focus ~ span #btnBuscar{
 
 /*************************RADIO***************/
 
-.copy{
+.footer-index{
 	position: absolute;
-	top: 95%;
+	bottom: 0;
+	width: 100%;
+}
+
+.copy{
+	margin: 0 auto;
+	text-align: center;
+	color: #181818;
+	font-family: 'Open sans';
+}
+
+.btnCadastrar{
+	position: absolute;
+	right: 30px;
+	background-color: #E1BEE7;
+	border: 2px;
+	border-radius: 4px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 5px; 
+	padding-bottom: 5px;
+	text-align: center;
+	color: #676767;
+	font-family: 'Open Sans';
+	font-size: 1em;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-right: 2px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.btnCadastrar:hover {
+	background-color: #571047;
+	color: #EDE7F6;
 }

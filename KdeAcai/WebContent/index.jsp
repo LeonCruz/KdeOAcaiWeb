@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style_index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body style="margin: 0;">
     <main class="main-index">
     <div class="box">
 	    <form action="lojas.jsp" method="get">
@@ -36,7 +36,7 @@
     </main>
 
     <footer class="footer-index">
-        <a href="cadastro-loja.jsp"><button>Cadastrar Loja</button></a>
+        <a href="cadastro-loja.jsp"><input class="btnCadastrar" type="button" value="CADASTRAR LOJA"></a>
         <div class="copy">
         	<p>Copyright 2018 - Indie Atom</p>
         </div>
