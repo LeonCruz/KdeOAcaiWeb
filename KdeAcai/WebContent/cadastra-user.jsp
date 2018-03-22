@@ -26,7 +26,12 @@
 			response.sendRedirect("index.jsp");
 		}
 	} else {
-		response.sendRedirect("cadastro-user.jsp");
+		%>
+		<script>
+		alert("ERRO! Usuário já cadastrado!");
+		window.location = "cadastro-user.jsp";
+		</script>
+		<%
 	}
 %>
 
