@@ -25,8 +25,7 @@
 	if(<%= logou%>) {
 		<% 
 		session.setAttribute("ClienteID", busca.getInt("id"));
-		cliente.setNome(busca.getString("nome"));
-		session.setAttibute("Cliente", cliente);
+		session.setAttribute("ClienteNome", busca.getString("nome"));
 		%>
 		window.location = "index.jsp"
 	} else {
