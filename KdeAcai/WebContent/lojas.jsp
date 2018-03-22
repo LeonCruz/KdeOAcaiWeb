@@ -31,7 +31,10 @@
 		<a class="index" href="index.jsp">Home</a>
 		
 		<%		
-		try{
+			if(session.getAttribute("ClienteID") == null) {
+				session.setAttribute("ClienteID", -1);
+			}
+		
 			if(session.getAttribute("ClienteID").toString().equals("-1")) {
 				%>
 				<div class="login">
@@ -46,9 +49,6 @@
 				</div>
 				<%
 			}
-		} catch (NullPointerException e)  {
-			System.out.println(e);
-		}
 		%>
 	</header>
 	<main class="principal">
