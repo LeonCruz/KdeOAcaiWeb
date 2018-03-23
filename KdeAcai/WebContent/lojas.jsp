@@ -91,12 +91,12 @@
 				<h2 class="titulo-loja"><%= busca.getString("nome") %></h2>
 				<span class="endereco-loja"><%= busca.getString("localizacao") %></span> <br />
 				
-				<div class="avaliacao">
-					<input type="radio" id="gostei" name="avalia<%= i %>" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
-					<label for="gostei"><span class="s"></span>Gostei</label>
-					<input type="radio" id="ngostei" name="avalia<%= i %>" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
-					<label for="ngostei"><span class="n"></span>Não Gostei</label>
-				</div>
+				<form class="avaliacao">
+					<input type="radio" id="gostei<%= i %>" name="avalia<%= i %>" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="1">
+					<label for="gostei<%= i %>"><span class="s"></span>Gostei</label>
+					<input type="radio" id="ngostei<%= i %>" name="avalia<%= i %>" onclick="avaliar(<%= busca.getInt("id") %>, <%= idCliente %>, this.value)" value="0">
+					<label for="ngostei<%= i %>"><span class="n"></span>Não Gostei</label>
+				</form>
 				<div class="estrelas">Relevância: <%= busca.getFloat("avaliacao") * 100 %>%</div>
 			</div>
 			<div class="precos">
