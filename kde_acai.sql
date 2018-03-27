@@ -157,7 +157,7 @@ CREATE TABLE `lojas` (
 
 LOCK TABLES `lojas` WRITE;
 /*!40000 ALTER TABLE `lojas` DISABLE KEYS */;
-INSERT INTO `lojas` VALUES (1,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',0.666667,'Av. Dois Corações, 1245','91985284163',4,8,15),(2,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',1,'Rua Vasconcelos, 10','91987456329',5,9,15),(3,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',0.333333,'Av. Pobre Juan, 236','91985286394',3,7.5,14),(12,'jorge@gmail.com','caf1a3dfb505ffed0d024130f58c5cfa','Açaí do Jorge',0,'Av. Estrella, 4005','9132557960',0,10.6,0);
+INSERT INTO `lojas` VALUES (1,'acaidobom@gmail.com','senhaloja01','Açaí do Bom ',0.666667,'Av. Dois Corações, 1245','91985284163',4,8,15),(2,'ilhaacai@gmail.com','senhaloja02','Açaí Da Ilha',1,'Rua Vasconcelos, 10','91987456329',5,9,15),(3,'julhoacai3@gmail.com','senhaloja03','Jullhos\'s Açaí ',0.333333,'Av. Pobre Juan, 236','91985286394',3,7.5,14),(4,'jorge@gmail.com','caf1a3dfb505ffed0d024130f58c5cfa','Açaí do Jorge',0,'Av. Estrella, 4005','9132557960',0,10.6,0);
 /*!40000 ALTER TABLE `lojas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
