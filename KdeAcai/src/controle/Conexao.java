@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
-	private static String caminho = "jdbc:mysql://localhost:3306/kde_acai";
-	private static String login = "root";
+	private static String caminho = "jdbc:mysql://172.18.6.27:3307/kde_acai";
+	private static String login = "aluno";
 	private static String senha = "ifpa@123";
 	private static Connection con;
 	
